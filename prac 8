@@ -1,19 +1,20 @@
 import random
 
 class Fruit():
-    def __init__(self, number):
+    def __init__(self, number, name):
         self.number = number
-        self.ripe = random.choice ([True, False])
+        self.name = name
+        self.ripe = random.choice([True, False])
 
     def eat(self):
         if self.ripe:
-            print(f"{self.number} - it's delicious")
+            print(f"{self.number} - {self.name} is delicious")
         else:
-            print(f"{self.number} - it's not ripe")
+            print(f"{self.number} - {self.name} is not ripe")
 
 some_fruit_1 = Fruit(1, "apple")
 some_fruit_2 = Fruit(2, "orange")
-some_fruit_3 = Fruit(3, "pear" )
+some_fruit_3 = Fruit(3, "pear")
 
 some_fruit_1.eat()
 some_fruit_2.eat()
